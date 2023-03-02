@@ -49,4 +49,16 @@ puts quote
 
 Notice the `puts` outputs are the same in the second example, even though we performed the `<<` action on `line` and not `quote`. quite interesting.
 
+## Ranges
+Ranges can be inclusive of the last value or not, depending on the operator you use.  For example:
+
+```ruby
+(1..5).to_a
+  => [1, 2, 3, 4, 5]
+
+(1...5).to_a
+  => [1, 2, 3, 4]
+```
+
+Notice the triple dot expression does not include the final number of the range.  Whereas the double-dot expression DOES include the final number in the range.
 </details>
