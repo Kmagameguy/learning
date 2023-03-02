@@ -7,14 +7,14 @@
 
 This thingy is called a "shovel operator": `<<`.
 
-It is used to append content to other content.  For example:
+It is used to append one thing to another.  For example:
 
 ```ruby
 quote = "I'll have the tuna."
 quote << " No crust."
-puts quote
 
-I'll have the tuna. No crust.
+puts quote
+  => I'll have the tuna. No crust.
 ```
 
 This is similar to the `+=` syntax, with a few important differences:
@@ -47,6 +47,6 @@ puts quote
   => You don't turn your back on family, even when they do.
 ```
 
-quite interesting.
+Notice the `puts` outputs are the same in the second example, even though we performed the `<<` action on `line` and not `quote`. quite interesting.
 
 </details>
