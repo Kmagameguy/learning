@@ -61,4 +61,22 @@ Ranges can be inclusive of the last value or not, depending on the operator you 
 ```
 
 Notice the triple dot expression does not include the final number of the range.  Whereas the double-dot expression DOES include the final number in the range.
+
+## .map() and .collect()
+
+These two methods apply a transformation to items in an array.  For example:
+
+```ruby
+array = [1, 2, 3]
+new_array = array.map { |item| item + 5 }
+  => [6, 7, 8]
+```
+
+I've seen `.map()` used more commonly than `.collect()`.
+
+## Synonyms
+`raise` and `fail` are synonyms.
+`.collect()` and `.map()` are synonyms.
+`.select()` and `.find_all()` are synonyms.
+
 </details>
