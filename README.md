@@ -75,8 +75,8 @@ new_array = array.map { |item| item + 5 }
 I've seen `.map()` used more commonly than `.collect()`.
 
 ## Synonyms
-`raise` and `fail` are synonyms.
-`.collect()` and `.map()` are synonyms.
-`.select()` and `.find_all()` are synonyms.
+`raise` and `fail` are synonyms.  
+`.collect()` and `.map()` are synonyms.  
+`.select()` and `.find_all()` are synonyms.  
 
 </details>
