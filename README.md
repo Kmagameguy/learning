@@ -1,6 +1,46 @@
 # Stuff I'm Learning
 
 <details>
+<summary>HTML & CSS</summary>
+
+## Border-Sizing Attribute
+
+Setting `box-sizing: border-box;` is an easy way to make CSS sizing computations easier.  By default, setting a width/height value on an object doesn't factor stuff like padding or border values.  So for example, if you define something like this:
+
+```
+.box-one {
+  padding: 10px;
+  height : 100px;
+  width  : 100px;
+  border : 30px solid red;
+  margin : 100px;
+}
+```
+
+The height in this case is 180 instead of 100.  That's because we have the height, PLUS padding on top and bottom (10 + 10 = 20), PLUS border on top and bottom (30 + 30 = 60).  Alternatively:
+
+```
+.box-one {
+  padding: 10px;
+  height : 100px;
+  width  : 100px;
+  border : 30px solid red;
+  margin : 100px;
+  box-sizing: border-box;
+}
+```
+
+Adding the `box-sizing` attribute ensures width & height computation takes into account the other stuff.  You can set this property on all elements to ensure width/height specifications are exactly what you intend:
+
+```
+* {
+  box-sizing: border-box;
+}
+```
+
+</details>
+
+<details>
 <summary>Ruby</summary>
 
 ## Shovel Operator
@@ -78,5 +118,37 @@ I've seen `.map()` used more commonly than `.collect()`.
 `raise` and `fail` are synonyms.  
 `.collect()` and `.map()` are synonyms.  
 `.select()` and `.find_all()` are synonyms.  
+
+</details>
+
+<details>
+<summary>How to Learn</summary>
+
+## Embracing Challenge
+Reframe your thinking from:
+- "I can't do this" or
+- "I don't understand this"
+
+to:
+- "I can't do this ... _yet_"
+- "I don't understand this ... _yet_"
+
+This can help diffuse a natural instinct to run away from the challenge, cheat the challenge, or search for a simpler challenge for instant gratification.
+
+## Working Through Discomfort
+NOPS for dealing with discomfort during learning:
+- Notice it.
+- Own it.
+- Push into it.
+- Stay with it.
+
+Allows your anxities to level off and give you the headspace to drag your comfort zone further.  For example if you don't understand recursion, try writing the simplest recursion method you can.
+
+## How to Start Learning
+Start with very small, specific goals that are doable.
+
+## Learning by Reading
+1. Consider reading the book away from the computer and absorb as much as possible.
+1. Come up with questions or thoughts on different ways of approaching a topic.
 
 </details>
