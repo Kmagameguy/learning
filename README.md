@@ -33,8 +33,14 @@ The height in this case is 180 instead of 100.  That's because we have the heigh
 Adding the `box-sizing` attribute ensures width & height computation takes into account the other stuff.  You can set this property on all elements to ensure width/height specifications are exactly what you intend:
 
 ```
-* {
+html {
   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 ```
 
