@@ -47,6 +47,38 @@ html {
 </details>
 
 <details>
+<summary>JavaScript</summary>
+# Set & Map
+
+## Sets
+
+Sets are like Arrays, but values may only occur once in a set.  You can also iterate through a Set in insertion order (the order in which each element was inserted into the set).
+
+```javascript
+const mySet1 = new Set();
+
+mySet1.add(1);
+mySet1.add(5);
+mySet1.add(5); // 5 already exists, so nothing happens here
+```
+
+## Maps
+
+Maps are like hashes (they hold key-value pairs), but they remember the original insertion order of the keys.
+
+```javascript
+const myMap1 = new Map();
+
+myMap1.set('a', 1);
+myMap1.set('b', 2);
+myMap1.set('c', 3);
+
+console.log(map1.get('a')); // 1
+```
+
+</details>
+
+<details>
 <summary>Ruby</summary>
 
 ## Shovel Operator
