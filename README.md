@@ -171,6 +171,30 @@ Example:
 10 <=>  5 #=>  1
 ```
 
+## Coercing Truthiness / Falsiness to Booleans
+
+Given that ruby expressions implicitly return a value, testing for booleans can be tricky.  See the following example:
+
+```ruby
+  foo = nil
+  bar = 'qux'
+  isOk = foo || bar
+
+  #=> 'qux'
+```
+
+The result is "truthy" in that `bar` has a string value (neither a `nil` or `false` value).  If you were expecting a `true` or `false` value from this code you'd be disappointed.  You can coerce a "truthy" or "falsy" return into true booleans like so:
+
+```ruby
+  foo = nil
+  bar = 'qux'
+  isOk = !!(foo || bar)
+
+  #=> true
+```
+
+Where the `!!` operator is doing the heavy lifting.  `!!a` is the equivalent of `!(!a)`, in which the inner `!` converts the value of a to false if it is "truthy", or `true` if a is falsy.  This gets us a boolean value (albeit the opposite of what we wanted).  Then the outer `!` flips the `true` or `false` value, returning the expected boolean value.
+
 ## Synonyms
 `raise` and `fail` are synonyms.  
 `.collect()` and `.map()` are synonyms.  
