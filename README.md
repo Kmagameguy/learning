@@ -153,6 +153,24 @@ new_array = array.map { |item| item + 5 }
 
 I've seen `.map()` used more commonly than `.collect()`.
 
+## Spaceship Operator
+
+This is the spaceship operator: `<=>`
+
+It's useful to control flow for comparisons that could be more than simply "true" or "false":
+
+- `-1` if the value on the left is less than the value on the right
+- `0` if the value on the left is equal to the value on the right
+- `1` if the value on the left is greater than the value on the right
+
+Example:
+
+```ruby
+5  <=> 10 #=> -1
+10 <=> 10 #=>  0
+10 <=>  5 #=>  1
+```
+
 ## Synonyms
 `raise` and `fail` are synonyms.  
 `.collect()` and `.map()` are synonyms.  
