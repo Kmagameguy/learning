@@ -195,6 +195,13 @@ The result is "truthy" in that `bar` has a string value (neither a `nil` or `fal
 
 Where the `!!` operator is doing the heavy lifting.  `!!a` is the equivalent of `!(!a)`, in which the inner `!` converts the value of a to false if it is "truthy", or `true` if a is falsy.  This gets us a boolean value (albeit the opposite of what we wanted).  Then the outer `!` flips the `true` or `false` value, returning the expected boolean value.
 
+## Classes
+
+### Instance Variables
+
+Signified by an `@` symbol before the variable name, instance variables are used to keep track of an object's _state_.
+These variables exist for the lifetime of the object instance and is a simple way to tie data to objects.
+
 ## Synonyms
 `raise` and `fail` are synonyms.  
 `.collect()` and `.map()` are synonyms.  
