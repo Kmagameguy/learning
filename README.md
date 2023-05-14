@@ -195,6 +195,20 @@ The result is "truthy" in that `bar` has a string value (neither a `nil` or `fal
 
 Where the `!!` operator is doing the heavy lifting.  `!!a` is the equivalent of `!(!a)`, in which the inner `!` converts the value of a to false if it is "truthy", or `true` if a is falsy.  This gets us a boolean value (albeit the opposite of what we wanted).  Then the outer `!` flips the `true` or `false` value, returning the expected boolean value.
 
+## Stacking .with_index()
+
+You can stack `.with_index()` like so:
+
+```
+arr = ('a'..'h')
+
+arr.each_with_object({}).with_index do | (item, hash), index |
+  hash[item] = index
+end
+
+  => {"a"=>0, "b"=>1, "c"=>2, "d"=>3, "e"=>4, "f"=>5, "g"=>6, "h"=>7}
+```
+
 ## Classes
 
 ### Instance Variables
